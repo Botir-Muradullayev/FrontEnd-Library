@@ -11,7 +11,11 @@ const routes = [
     },
     {
         path: '/book-info',
-        component:  () => import('../pages/BookInfo')
+        component: () => import('../pages/BookInfo')
+    },
+    {
+        path: '/login',
+        component: () => import('../pages/Login')
     },
 ]
 

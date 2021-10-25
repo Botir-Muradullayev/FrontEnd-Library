@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div class="row mt-4">
         <div class="col">
             <footer class="bg-dark text-light p-5">
                 &copy; All rights reserved
