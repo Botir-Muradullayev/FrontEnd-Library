@@ -1,7 +1,6 @@
 <template>
     <form class="col-6" @submit.prevent="auth">
         <div class="mb-3">
-            <h1>{{ form.email }}</h1>
             <label for="exampleInputEmail1" class="form-label">Email</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="form.email">
         </div>
