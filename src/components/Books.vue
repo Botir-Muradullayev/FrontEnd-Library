@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import {mapActions, mapGetters} from 'vuex';
+import {mapActions, mapGetters} from 'vuex'
 
 export default {
     name: "Books",
@@ -35,7 +35,12 @@ export default {
         ...mapActions(['fetchBooks'])
     },
     mounted() {
-        this.fetchBooks()
+        this.fetchBooks(this.$route.params.id)
+    },
+    watch: {
+        '$route.params.id'() {
+            this.fetchBooks(this.$route.params.id)
+        }
     }
 }
 </script>

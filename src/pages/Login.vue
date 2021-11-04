@@ -17,13 +17,15 @@ import {mapActions} from 'vuex'
 export default {
     name: "Login",
     methods: {
-        ...mapActions(['fetchToken']),
+        ...mapActions(['fetchToken', "fetchCategories"]),
         auth() {
             console.log('auth funksiyasi ishladi')
             this
                 .fetchToken(this.form)
                 .then(() => {
                     console.log('Siz avtoriztasiya qilindingiz')
+                    this.$router.push('/')
+                    this.fetchCategories()
                 })
                 .catch(()=>{
                     console.log('Login yoki parolingiz xato')

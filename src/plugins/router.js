@@ -10,6 +10,11 @@ const routes = [
         component: Home
     },
     {
+        path: '/category/:id',
+        component: Home
+
+    },
+    {
         path: '/book-info',
         component: () => import('../pages/BookInfo')
     },

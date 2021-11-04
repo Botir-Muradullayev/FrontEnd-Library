@@ -1,14 +1,15 @@
 <template>
     <div class="col-12 col-md-2">
-        <ul class="list-group">
-            <li
+        <div class="list-group">
+            <router-link
                 v-for="category of getCategories"
                 v-bind:key="category.id"
                 class="list-group-item"
+                :to="'/category/' + category.id"
             >
                 {{category.name}}
-            </li>
-        </ul>
+            </router-link>
+        </div>
     </div>
 </template>
 
