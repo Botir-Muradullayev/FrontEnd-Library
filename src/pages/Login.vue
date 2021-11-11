@@ -24,11 +24,13 @@ export default {
                 .fetchToken(this.form)
                 .then(() => {
                     console.log('Siz avtoriztasiya qilindingiz')
+                    alert('Kutubxonamizga xush kelibsiz')
                     this.$router.push('/')
                     this.fetchCategories()
                 })
                 .catch(()=>{
                     console.log('Login yoki parolingiz xato')
+                    alert('Parol yoki login xato, iltimos qayatdan to`g`ri "Login", "Parol" kiriting')
                 })
 
         }
